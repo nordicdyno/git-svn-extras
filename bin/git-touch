@@ -1,0 +1,8 @@
+#!/bin/sh
+
+filename="$*"
+
+test -z "$filename" && echo "filename required" && exit 1
+
+touch "$filename" \
+  && git add "$filename"
